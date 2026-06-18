@@ -1,0 +1,28 @@
+# Reportes reales generados por los scripts
+reports/*
+!reports/.gitkeep
+
+# Archivos temporales
+*.log
+*.tmp
+*.bak
+
+# Reportes exportados
+*.csv
+*.json
+*.xml
+*.txt
+
+# Archivos comprimidos
+*.zip
+*.rar
+*.7z
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# PowerShell
+*.ps1xml
+*.pssc
+*.psrc
