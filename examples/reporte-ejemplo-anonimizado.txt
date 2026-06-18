@@ -1,0 +1,55 @@
+Reporte básico de análisis de seguridad del equipo
+
+Fecha de generación: 2026-01-01 10:00:00
+Equipo analizado: EQUIPO-DE-EJEMPLO
+
+==================================================
+
+1. Información del sistema operativo
+   ==================================================
+
+CsName             : EQUIPO-DE-EJEMPLO
+WindowsProductName : Windows 11 Pro
+WindowsVersion     : 23H2
+OsArchitecture     : 64-bit
+OsBuildNumber      : 00000
+
+==================================================
+2. Últimas actualizaciones instaladas
+=====================================
+
+HotFixID     InstalledOn
+
+---
+
+KB0000000    01/01/2026
+
+==================================================
+3. Estado de Microsoft Defender
+===============================
+
+AMServiceEnabled              : True
+AntivirusEnabled              : True
+RealTimeProtectionEnabled     : True
+AntivirusSignatureLastUpdated : 01/01/2026
+
+==================================================
+4. Estado del Firewall de Windows
+=================================
+
+Name     Enabled
+
+---
+
+Domain   True
+Private  True
+Public   True
+
+==================================================
+5. Recomendaciones iniciales
+============================
+
+* Mantener Windows actualizado.
+* Verificar que Microsoft Defender esté activo.
+* Confirmar que el Firewall de Windows esté habilitado.
+* No compartir reportes reales sin anonimizar.
