@@ -19,11 +19,26 @@ param(
 )
 
 $ErrorActionPreference = "SilentlyContinue"
+$IsAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(
+    [Security.Principal.WindowsBuiltInRole]::Administrator
+)
 
-if (-not (Test-Path $OutputPath)) {
-    New-Item -ItemType Directory -Path $OutputPath | Out-Null
+if (-not $IsAdmin) {
+    Write-Warning "PowerShell no se está ejecutando como administrador. Algunos datos podrían no mostrarse completos."
 }
-
+else {
+    Write-Host "PowerShell se está ejecutando como administrador." -ForegroundColor Green
+}
+if (-not (Test-Path $OutputPath)) {
+    try {
+        New-Item -ItemType Directory -Path $OutputPath -Force | Out-Null
+        Write-Host "Carpeta de reportes creada en: $OutputPath" -ForegroundColor Green
+    }
+    catch {
+        Write-Error "No se pudo crear la carpeta de reportes en: $OutputPath"
+        exit 1
+    }
+}
 $Timestamp = Get-Date -Format "yyyy-MM-dd_HH-mm-ss"
 $SafeComputerName = $env:COMPUTERNAME -replace '[^a-zA-Z0-9_-]', '_'
 $ReportFile = Join-Path $OutputPath "pc-security-audit_${SafeComputerName}_$Timestamp.txt"
