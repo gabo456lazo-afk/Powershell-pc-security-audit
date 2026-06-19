@@ -61,6 +61,14 @@ Este script genera un reporte básico del equipo en modo lectura. No modifica co
 * PowerShell 5.1 o superior.
 * Ejecutar PowerShell como administrador para obtener mejores resultados.
 
+## Guia de ejecucion paso a paso
+
+
+
+
+
+
+
 ## Ejecución básica
 
 Desde la carpeta del repositorio:
