@@ -54,6 +54,58 @@ Get-PCSecurityAudit.ps1
 ```
 
 Este script genera un reporte básico del equipo en modo lectura. No modifica configuraciones del sistema.
+## Segundo script: análisis forense básico-intermedio
+
+El proyecto también incluye una versión más avanzada del script:
+
+```text
+Get-PCSecurityForensicAuditV2.ps1
+```
+
+Este script está orientado a un análisis defensivo y forense básico-intermedio en equipos Windows.
+
+Recolecta información sobre:
+
+* Sistema operativo.
+* Estado de Microsoft Defender.
+* Detecciones históricas de Microsoft Defender.
+* Estado del Firewall de Windows.
+* Usuarios administradores locales.
+* Procesos activos con ruta, firma digital y hash SHA256.
+* Procesos ubicados en rutas comúnmente sospechosas.
+* Conexiones TCP activas con proceso asociado.
+* Servicios automáticos en ejecución.
+* Servicios ubicados en rutas comunes de riesgo.
+* Elementos que inician con Windows.
+* Tareas programadas activas.
+* Programas instalados.
+* Eventos de inicio de sesión fallido.
+* Eventos de privilegios especiales.
+* Eventos recientes de PowerShell.
+* Archivos recientes en rutas de interés forense.
+* Reglas de Firewall habilitadas para entrada.
+
+### Ejecución del script V2
+
+Desde la carpeta del repositorio:
+
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
+.\scripts\Get-PCSecurityForensicAuditV2.ps1
+```
+
+El reporte se guardará en la carpeta:
+
+```text
+reports-forensic-v2/
+```
+
+### Advertencia
+
+Este script genera más información que la versión básica.
+
+No subas reportes reales a GitHub sin anonimizar, ya que pueden contener nombres de usuario, nombre del equipo, rutas internas, procesos, servicios, conexiones de red y eventos del sistema.
+
 
 ## Requisitos
 
