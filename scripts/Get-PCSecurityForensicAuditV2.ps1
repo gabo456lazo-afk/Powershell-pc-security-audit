@@ -1,5 +1,6 @@
 <#
-.SYNOPSISRealiza un análisis defensivo básico-intermedio con enfoque forense en Windows.
+.SYNOPSIS
+Realiza un análisis defensivo básico-intermedio con enfoque forense en Windows.
 .DESCRIPTIONEste script genera reportes locales para apoyar el análisis inicial de posiblesseñales de intrusión, malware, backdoors o persistencia en un equipo Windows.
 
 Recolecta información sobre:
