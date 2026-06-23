@@ -4,6 +4,33 @@ Todos los cambios importantes de este proyecto serán documentados en este archi
 
 El formato está basado en una estructura simple de versiones para mantener un historial claro del avance del repositorio.
 
+## [0.2.0] - 2026-06-23
+
+### Added
+
+* Agregado el script `Get-PCSecurityForensicAuditV2.ps1`.
+* Agregado análisis defensivo y forense básico-intermedio para equipos Windows.
+* Recolección de procesos activos con ruta, firma digital y hash SHA256.
+* Recolección de conexiones TCP activas con proceso asociado.
+* Revisión de servicios automáticos en ejecución.
+* Revisión de tareas programadas activas.
+* Revisión de programas instalados.
+* Revisión de eventos de seguridad relacionados con inicios de sesión fallidos.
+* Revisión de eventos de privilegios especiales.
+* Revisión de eventos recientes de PowerShell.
+* Revisión de archivos recientes en rutas comunes de interés forense.
+* Exportación de resultados en archivos `.txt` y `.csv`.
+
+### Security
+
+* Se agregó protección para la carpeta `reports-forensic-v2/` mediante `.gitignore`.
+* Se reforzó la advertencia sobre no subir reportes reales a GitHub.
+* Se mantiene el enfoque educativo, defensivo y autorizado del proyecto.
+
+### Changed
+
+* El proyecto evoluciona desde una auditoría básica hacia un análisis defensivo más completo.
+
 ## [0.1.0] - 2026-06-18
 
 ### Added
