@@ -2,6 +2,10 @@
 reports/*
 !reports/.gitkeep
 
+# Reportes forenses V2 generados localmente
+reports-forensic-v2/*
+!reports-forensic-v2/.gitkeep
+
 # Archivos temporales
 *.log
 *.tmp
